@@ -1,7 +1,7 @@
 # ~/.tmuxinator/ls-sites.yml
 
 name: ls-sites
-root: ~/
+root: ~/ls-sites
 
 # Optional tmux socket
 # socket_name: foo
@@ -35,7 +35,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server deals true
-
   - products:
       root: ~/ls-sites/products
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -43,7 +42,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server products true
-
   - mobile:
       root: ~/ls-sites/mobile
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -51,7 +49,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server mobile true
-
   - browse:
       root: ~/ls-sites/browse
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -59,7 +56,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server browse true
-
   - shopmobile:
       root: ~/ls-sites/shopmobile
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -67,7 +63,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server shopmobile true
-
   - sponsors:
       root: ~/ls-sites/sponsors
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -75,7 +70,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server sponsors true
-
   - accounts:
       root: ~/ls-sites/accounts
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -83,7 +77,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server accounts true
-
   - sso-frontend:
       root: ~/ls-sites/sso-frontend
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -91,7 +84,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server sso-frontend true
-
   - stepford:
       root: ~/ls-sites/stepford
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -99,7 +91,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server stepford true
-
   - payments:
       root: ~/ls-sites/payments
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -107,7 +98,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server payments true
-
   - deals-service:
       root: ~/ls-sites/deals-service
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -115,15 +105,13 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server deals-service true
-
-  - deal-bucks:
-      root: ~/ls-sites/deal-bucks
+  - deal_bucks:
+      root: ~/ls-sites/deal_bucks
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
       panes:
         - vim .
         - bundle exec foreman run rails c
-        - start_dev_server deal-bucks true
-
+        - start_dev_server deal_bucks true
   - catalog-service:
       root: ~/ls-sites/catalog-service
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -131,7 +119,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server catalog-service true
-
   - checkout:
       root: ~/ls-sites/checkout
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -139,7 +126,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server checkout true
-
   - paypal:
       root: ~/ls-sites/paypal
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -147,7 +133,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server paypal true
-
   - fakeybiller:
       root: ~/ls-sites/fakeybiller
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
@@ -155,3 +140,24 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server fakeybiller true
+  - merchant_profile_service:
+      root: ~/ls-sites/merchant_profile_service
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - start_dev_server merchant_profile_service true
+  - browse-service:
+      root: ~/ls-sites/browse-service
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - start_dev_server browse-service true
+  - ls-browse-service:
+    root: ~/ls-sites/ls-browse-service
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - start_dev_server ls-browse-service true
