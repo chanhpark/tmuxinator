@@ -155,7 +155,7 @@ windows:
         - bundle exec foreman run rails c
         - start_dev_server browse-service true
   - ls-browse-service:
-    root: ~/ls-sites/ls-browse-service
+      root: ~/ls-sites/ls-browse-service
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
       panes:
         - vim .
