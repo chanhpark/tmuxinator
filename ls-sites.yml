@@ -76,7 +76,21 @@ windows:
       panes:
         - vim .
         - bundle exec foreman run rails c
+  - events:
+      root: ~/ls-sites/events
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - start_dev_server sso-frontend true
         - start_dev_server accounts true
+  - escapes:
+      root: ~/ls-sites/escapes
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - start_dev_server sso-frontend true
   - sso-frontend:
       root: ~/ls-sites/sso-frontend
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
