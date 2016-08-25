@@ -112,13 +112,6 @@ windows:
         - vim .
         - bundle exec foreman run rails c
         - start_dev_server payments true
-  - deals-service:
-      root: ~/ls-sites/deals-service
-      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
-      panes:
-        - vim .
-        - bundle exec foreman run rails c
-        - start_dev_server deals-service true
   - deal_bucks:
       root: ~/ls-sites/deal_bucks
       layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}

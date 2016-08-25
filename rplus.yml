@@ -1,0 +1,85 @@
+# ~/.tmuxinator/rplus.yml
+
+name: rplus
+root: ~/ls-sites
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t rplus
+
+windows:
+  - card-linking:
+      root: ~/ls-sites/card-linking
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]} 
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - STEPFORD_LOCAL=1 bundle exec foreman start
+  - card-linking-service:
+      root: ~/ls-sites/card-linking-service
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - eval $(docker-machine env default) && STEPFORD_LOCAL=1 bundle exec foreman start
+  - referral_service:
+      root: ~/ls-sites/referral_service
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - STEPFORD_LOCAL=1 bundle exec foreman start
+      root: ~/ls-sites/ls-referrals
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - STEPFORD_LOCAL=1 bundle exec foreman start
+  - accounts:
+      root: ~/ls-sites/accounts
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]} 
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - STEPFORD_LOCAL=1 bundle exec foreman start
+  - sso-frontend:
+      root: ~/ls-sites/sso-frontend
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]} 
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - STEPFORD_LOCAL=1 bundle exec foreman start
+  - payments:
+      root: ~/ls-sites/payments
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]} 
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - STEPFORD_LOCAL=1 bundle exec foreman start
+  - stepford:
+      root: ~/ls-sites/stepford
+      layout: ddf1,202x43,0,0{101x43,0,0,0,100x43,102,0[100x21,102,0,2,100x21,102,22,3]}
+      panes:
+        - vim .
+        - bundle exec foreman run rails c
+        - bundle exec foreman start
